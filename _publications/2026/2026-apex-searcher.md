@@ -10,5 +10,6 @@ abstract: >-
   We propose APEX-Searcher, a framework that augments LLMs' search capabilities through agentic planning and execution for improved information retrieval.
 authors:
   - Kun Chen
+cover:          /assets/images/covers/APEX.png
 links: {}
 ---

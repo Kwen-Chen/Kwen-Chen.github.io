@@ -422,3 +422,21 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+/* Publication cover image hover preview */
+.pub-cover-zoom {
+    cursor: zoom-in;
+}
+
+.pub-zoom-preview {
+    position: fixed;
+    max-width: 50vw;
+    max-height: 55vh;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+}
+
