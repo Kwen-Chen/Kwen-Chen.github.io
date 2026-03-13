@@ -559,3 +559,94 @@ h2.pt-4 {
     background-color: #fff;
 }
 
+/* Blog layout — content preserves original width, TOC uses remaining space */
+.blog-layout-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 15px;
+    gap: 1.5rem;
+}
+
+.blog-main {
+    flex: 0 1 950px;
+    min-width: 0;
+}
+
+.blog-toc-sidebar {
+    flex: 0 0 auto;
+    width: clamp(160px, 18vw, 360px);
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .blog-toc-sidebar {
+        display: block;
+    }
+}
+
+/* Blog Table of Contents */
+.blog-toc-nav {
+    position: sticky;
+    top: 6rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    padding-left: 0.75rem;
+    border-left: 2px solid #f0f0f0;
+}
+
+.blog-toc-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #aaa;
+    margin-bottom: 0.75rem;
+}
+
+.blog-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-toc-list li {
+    margin-bottom: 0.25rem;
+}
+
+.blog-toc-list a {
+    display: block;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #999;
+    text-decoration: none;
+    padding: 0.15rem 0;
+    transition: color 0.2s ease;
+}
+
+.blog-toc-list a:hover {
+    color: #2d3436;
+    text-decoration: none;
+}
+
+.blog-toc-list a.toc-active {
+    color: #4a7298;
+    font-weight: 500;
+}
+
+.blog-toc-list .toc-h3 {
+    padding-left: 0.75rem;
+}
+
+.blog-toc-list .toc-h4 {
+    padding-left: 1.5rem;
+}
+
+/* Hide TOC scrollbar */
+.blog-toc-nav::-webkit-scrollbar {
+    width: 0;
+}
+
+.blog-toc-nav {
+    scrollbar-width: none;
+}
+

@@ -21,36 +21,40 @@
 <body class="bg-white d-flex flex-column min-vh-100" {{ page.body_attr }}>
     {% include navbar.html %}
     <main class="flex-grow-1">
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <article class="bg-white rounded-xl p-4 mb-4" style="border: 1px solid #f0f0f0;">
-                        <header class="mb-4">
-                            <h1 class="display-4 mb-3">{{ page.title }}</h1>
-                            <div class="text-muted mb-3">
-                                <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
-                                {% if page.tags %}
-                                    <span class="ml-3">
-                                        <i class="fas fa-tags"></i>
-                                        {% for tag in page.tags %}
-                                            <span class="badge badge-light">{{ tag }}</span>
-                                        {% endfor %}
-                                    </span>
-                                {% endif %}
-                            </div>
-                        </header>
-                        
-                        <div class="blog-content">
-                            {{ content }}
+        <div class="blog-layout-wrapper">
+            <div class="blog-main">
+                <article class="bg-white rounded-xl p-4 mb-4" style="border: 1px solid #f0f0f0;">
+                    <header class="mb-4">
+                        <h1 class="display-4 mb-3">{{ page.title }}</h1>
+                        <div class="text-muted mb-3">
+                            <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
+                            {% if page.tags %}
+                                <span class="ml-3">
+                                    <i class="fas fa-tags"></i>
+                                    {% for tag in page.tags %}
+                                        <span class="badge badge-light">{{ tag }}</span>
+                                    {% endfor %}
+                                </span>
+                            {% endif %}
                         </div>
-                    </article>
-                    
-                    <div class="text-center mb-4">
-                        <a href="{{ '/blogs' | relative_url }}" class="btn btn-outline-primary">
-                            <i class="fas fa-arrow-left"></i> Back to All Blogs
-                        </a>
+                    </header>
+
+                    <div class="blog-content">
+                        {{ content }}
                     </div>
+                </article>
+
+                <div class="text-center mb-4">
+                    <a href="{{ '/blogs' | relative_url }}" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Blogs
+                    </a>
                 </div>
+            </div>
+            <div class="blog-toc-sidebar">
+                <nav id="blog-toc" class="blog-toc-nav">
+                    <div class="blog-toc-title">Contents</div>
+                    <ul class="blog-toc-list"></ul>
+                </nav>
             </div>
         </div>
     </main>
@@ -91,6 +95,65 @@
                     }
                 });
             </script>
+    <script>
+    (function() {
+        var tocList = document.querySelector('.blog-toc-list');
+        if (!tocList) return;
+
+        var content = document.querySelector('.blog-content');
+        var headings = content.querySelectorAll('h1, h2, h3');
+        var navbarHeight = 90;
+
+        if (headings.length === 0) {
+            document.getElementById('blog-toc').style.display = 'none';
+            return;
+        }
+
+        // Add scroll-margin to all headings so anchor links clear the navbar
+        headings.forEach(function(heading, i) {
+            if (!heading.id) {
+                heading.id = 'heading-' + i;
+            }
+            heading.style.scrollMarginTop = navbarHeight + 'px';
+
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.href = '#' + heading.id;
+            a.textContent = heading.textContent;
+            a.className = 'toc-' + heading.tagName.toLowerCase();
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.getElementById(heading.id);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - navbarHeight,
+                        behavior: 'smooth'
+                    });
+                    history.pushState(null, null, '#' + heading.id);
+                }
+            });
+            li.appendChild(a);
+            tocList.appendChild(li);
+        });
+
+        // Highlight active heading on scroll
+        var tocLinks = tocList.querySelectorAll('a');
+        function updateActive() {
+            var scrollPos = window.scrollY + navbarHeight + 10;
+            var current = null;
+            headings.forEach(function(heading) {
+                if (heading.offsetTop <= scrollPos) {
+                    current = heading.id;
+                }
+            });
+            tocLinks.forEach(function(link) {
+                link.classList.toggle('toc-active', link.getAttribute('href') === '#' + current);
+            });
+        }
+        window.addEventListener('scroll', updateActive, { passive: true });
+        updateActive();
+    })();
+    </script>
     <script src="{{ '/assets/js/common.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/bubble_visual_hash.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/semantic_scholar_citation_count.js' | relative_url }}"></script>
