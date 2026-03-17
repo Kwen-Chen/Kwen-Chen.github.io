@@ -130,7 +130,7 @@ source ~/.zshrc
 
 ## 4. Installed Plugins - Introduction & Usage
 
-### 4.1 `git` (built-in)
+### `git` (built-in)
 
 Provides **200+ aliases** for common git commands so you type less.
 
@@ -179,7 +179,7 @@ alias | grep git
 
 ---
 
-### 4.2 `z` (built-in)
+### `z` (built-in)
 
 A **directory jumper** that learns which directories you visit most and lets you jump to them with partial name matching.
 
@@ -218,7 +218,7 @@ z                 # shows the ranked list
 
 ---
 
-### 4.3 `zsh-autosuggestions` (third-party)
+### `zsh-autosuggestions` (third-party)
 
 Suggests commands **as you type** based on your command history. The suggestion appears in gray text after your cursor.
 
@@ -267,7 +267,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 ---
 
-### 4.4 `zsh-syntax-highlighting` (third-party)
+### `zsh-syntax-highlighting` (third-party)
 
 Provides **real-time syntax highlighting** as you type commands. Valid commands turn **green**, invalid ones turn **red**, strings are highlighted, and more.
 
