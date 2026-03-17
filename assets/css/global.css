@@ -11,6 +11,11 @@ html, body {
     height: 100%;
 }
 
+/* Always show scrollbar to prevent layout shift between pages */
+html {
+    overflow-y: scroll;
+}
+
 body.d-flex.flex-column.min-vh-100 {
     min-height: 100vh;
 }

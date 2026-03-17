@@ -1,6 +1,6 @@
 ---
 title:          "Flexible Entropy Control in RLVR with Gradient-Preserving Perspective"
-date:           2026-06-01 00:01:00 +0800
+date:           2026-02-09 00:01:00 +0800
 selected:       true
 pub:            "International Conference on Machine Learning (ICML)"
 pub_pre:        ""

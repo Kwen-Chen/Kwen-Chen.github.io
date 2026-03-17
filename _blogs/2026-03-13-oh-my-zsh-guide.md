@@ -10,6 +10,7 @@ tags:
 ---
 
 # Oh My Zsh Guide
+This article introduces the basic usage of Oh My Zsh, including installation, theme configuration, recommendation and configuration of commonly used plugins.
 
 ## 1. Installation
 

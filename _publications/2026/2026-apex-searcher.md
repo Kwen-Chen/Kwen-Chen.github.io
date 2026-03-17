@@ -1,6 +1,6 @@
 ---
 title:          "APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution"
-date:           2026-06-02 00:01:00 +0800
+date:           2026-03-14 00:01:00 +0800
 selected:       true
 pub:            "ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
 pub_pre:        ""
@@ -11,5 +11,6 @@ abstract: >-
 authors:
   - Kun Chen
 cover:          /assets/images/covers/APEX.png
-links: {}
+links: 
+  arXiv: https://arxiv.org/abs/2602.09782
 ---
