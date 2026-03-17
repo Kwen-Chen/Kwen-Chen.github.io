@@ -3,7 +3,7 @@
 {% assign first = include.first %}
 {% assign last = include.last %}
 
-<div class="border-bottom border-gray p-3 {% if hide_bottom_border %}border-0{% endif %}">
+<div class="border-bottom border-gray p-3 {% if hide_bottom_border %}border-0{% endif %} {% if item.lang == 'en' %}lang-en{% elsif item.lang == 'zh' %}lang-zh{% endif %}">
     <div class="row">
         <div class="col-12">
             <h5 class="mb-2">
@@ -31,7 +31,7 @@
             </div>
             <div class="mt-2">
                 <a href="{{ item.url | relative_url }}" class="btn btn-outline-primary btn-sm">
-                    Read More <i class="fas fa-arrow-right"></i>
+                    {% include i18n.html key="read_more" %} <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>

@@ -1,0 +1,41 @@
+# Navigation
+nav_home: "Home"
+nav_publications: "Publications"
+nav_blogs: "Blogs"
+nav_menu: "Menu"
+
+# Profile card
+cv: "Curriculum Vitae"
+google_scholar: "Google Scholar"
+github: "GitHub"
+wechat: "WeChat"
+twitter: "Twitter"
+linkedin: "LinkedIn"
+orcid: "ORCID"
+close: "Close"
+
+# Experience card
+education: "Education"
+experience: "Experience"
+honors_awards: "Honors & Awards"
+
+# News card
+news: "News"
+
+# Publication card
+selected_publications: "Selected Publications"
+view_all: "(view all)"
+all_publications: "All publications"
+marks: "Marks:"
+equal_contribution: "equal contribution"
+corresponding_author: "corresponding author"
+
+# Blog card
+read_more: "Read More"
+
+# Blog layout
+back_to_blogs: "Back to All Blogs"
+toc_title: "Contents"
+
+# Footer
+last_updated: "Last updated:"

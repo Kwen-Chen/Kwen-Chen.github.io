@@ -655,3 +655,49 @@ h2.pt-4 {
     scrollbar-width: none;
 }
 
+/* ===== i18n Language Toggle ===== */
+html.lang-active-en .lang-zh {
+    display: none !important;
+}
+
+html.lang-active-zh .lang-en {
+    display: none !important;
+}
+
+/* Language toggle switch */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d0dde8;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0.8rem;
+    margin-left: 0.75rem;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.lang-toggle-label {
+    padding: 0.2rem 0.5rem;
+    color: #999;
+    transition: all 0.2s ease;
+    user-select: none;
+    line-height: 1.4;
+}
+
+.lang-toggle-label:hover {
+    color: #4a7298;
+}
+
+.lang-toggle-active {
+    background-color: #4a7298;
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.lang-toggle-divider {
+    width: 1px;
+    background-color: #d0dde8;
+    align-self: stretch;
+}
+

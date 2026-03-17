@@ -1,0 +1,5 @@
+{%- comment -%}
+  Usage: {% include i18n.html key="education" %}
+  Outputs: <span class="lang-en">Education</span><span class="lang-zh">教育经历</span>
+{%- endcomment -%}
+<span class="lang-en">{{ site.data.i18n.en[include.key] }}</span><span class="lang-zh">{{ site.data.i18n.zh[include.key] }}</span>

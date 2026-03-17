@@ -8,6 +8,8 @@ pub_last:       ' <span class="badge badge-pill badge-publication badge-warning"
 pub_date:       "2026"
 abstract: >-
   We propose APEX-Searcher, a framework that augments LLMs' search capabilities through agentic planning and execution for improved information retrieval.
+abstract_zh: >-
+  我们提出了APEX-Searcher，一个通过智能体规划与执行来增强大语言模型搜索能力的框架，以改善信息检索效果。
 authors:
   - Kun Chen
 cover:          /assets/images/covers/APEX.png

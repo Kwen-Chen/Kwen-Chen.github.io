@@ -7,6 +7,11 @@ positions:
 - name: MAIS, Institute of Automation, Chinese Academy of Sciences
   logo: /assets/images/badges/CAS_logo.png
 
+positions_zh:
+- name: 博士研究生
+- name: 中国科学院自动化研究所 多模态人工智能系统全国重点实验室
+  logo: /assets/images/badges/CAS_logo.png
+
 email: "chenkun2024@ia.ac.cn"
 # cv_link: link-to-your-cv-file
 gscholar: LGHxrC0AAAAJ
@@ -35,6 +40,24 @@ short_bio: >-
     I thrive on following cutting-edge AI research, actively contributing to open-source communities.
   </p>
 
+short_bio_zh: >-
+  <h6> 👨‍🔬 关于我 </h6>
+  <p>
+    我是陈坤，
+    <a href="http://www.ia.cas.cn/" target="_blank">中国科学院自动化研究所</a>
+    <a href="https://mais.ia.ac.cn/" target="_blank">多模态人工智能系统全国重点实验室（MAIS）</a>
+    二年级博士研究生，专业为计算机应用技术。
+    此前，于2024年获得
+    <a href="https://www.uestc.edu.cn/" target="_blank">电子科技大学</a>
+    自动化专业工学学士学位。
+  </p>
+  <h6> 🌱 研究兴趣 </h6>
+  <p>
+    我的研究方向聚焦于<strong>大语言模型（LLMs）</strong>和<strong>多模态大语言模型（MLLMs）</strong>，
+    涵盖模型训练、对齐（RLHF/RLVR）、智能体系统以及长上下文扩展等方向。
+    我热衷于追踪前沿AI研究，积极参与开源社区贡献。
+  </p>
+
 portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-
 #   Photo caption here.
@@ -50,18 +73,42 @@ education:
   logo: /assets/images/badges/UESTC_logo.png
   position: >-
     Automation (GPA 3.94) <br/>
-    B.Eng. Student 
+    B.Eng. Student
   date: Sep. 2020 - Jun. 2024
+
+education_zh:
+- name: 中国科学院自动化研究所
+  logo: /assets/images/badges/CAS_logo.png
+  position: >-
+    计算机应用技术 <br/>
+    博士研究生，导师：<a href="https://people.ucas.ac.cn/~maowenji" target="_blank">毛文吉</a>
+  date: 2024年9月 - 至今
+- name: 电子科技大学
+  logo: /assets/images/badges/UESTC_logo.png
+  position: >-
+    自动化（GPA 3.94）<br/>
+    工学学士
+  date: 2020年9月 - 2024年6月
 
 experience:
 - name: Meituan
   logo: /assets/images/badges/meituan_logo.png
   position: Algorithm Research Intern
   date: Aug. 2025 - Feb. 2026
-- name: Wenge Tech 
+- name: Wenge Tech
   logo: /assets/images/badges/wenge_logo.png
   position: Algorithm Engineer, AI Research Institute
   date: Jun. 2024 - Jun. 2025
+
+experience_zh:
+- name: 美团
+  logo: /assets/images/badges/meituan_logo.png
+  position: 算法研究实习生
+  date: 2025年8月 - 2026年2月
+- name: 文哥科技
+  logo: /assets/images/badges/wenge_logo.png
+  position: 算法工程师，AI研究院
+  date: 2024年6月 - 2025年6月
 
 awards:
 - name: Outstanding Student of UESTC (Only 10 undergraduate students)
@@ -73,5 +120,17 @@ awards:
 - name: Meritorious Winner, Mathematical Contest in Modeling
   date: 2023
 - name: Multiple National Scholarships & SZSE Scholarships
+  date: 2020 - 2025
+
+awards_zh:
+- name: 电子科技大学成电杰出学生（全校仅10名本科生）
+  date: 2023
+- name: 第十八届"挑战杯"全国大学生课外学术科技作品竞赛 全国一等奖
+  date: 2023
+- name: 第十八届全国大学生智能车竞赛 全国一等奖
+  date: 2023
+- name: 美国大学生数学建模竞赛 Meritorious Winner
+  date: 2023
+- name: 多次获得国家奖学金及深交所奖学金
   date: 2020 - 2025
 

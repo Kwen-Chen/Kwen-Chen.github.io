@@ -7,6 +7,8 @@ pub_last:       ' <span class="badge badge-pill badge-publication badge-success"
 pub_date:       "2026"
 abstract: >-
   We propose SPECS, a self-distilled preference-based cold start method that decouples multimodal learning to improve multimodal reasoning capabilities.
+abstract_zh: >-
+  我们提出了SPECS，一种基于自蒸馏偏好的冷启动方法，通过解耦多模态学习来提升多模态推理能力。
 authors:
   - Kun Chen
   - Peng Shi

@@ -7,12 +7,12 @@
                         {% if site.data.profile.portrait_url %}
                         <!-- When the screen is wider than md, float the portrait on the right -->
                         <div class="figure float-right ml-4 mb-4 d-none d-md-block">
-                            <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid img-thumbnail" 
+                            <img
+                                src="{{ site.data.profile.portrait_url | relative_url }}"
+                                class="figure-img img-fluid img-thumbnail"
                                 style="height: 200px;"
-                                data-toggle="tooltip" 
-                                data-placement="top" 
+                                data-toggle="tooltip"
+                                data-placement="top"
                                 title="{{ site.data.profile.portrait_caption }}">
                         </div>
                         {% endif %}
@@ -30,21 +30,32 @@
                             {% endif %}
                         </div>
                         <div class="text-profile-position">
+                            <div class="lang-en">
                             {% for position in site.data.profile.positions %}
                             {% if position.logo -%}
                             <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
                             {%- endif %}
                             {{ position.name }}<br/>
                             {% endfor %}
+                            </div>
+                            <div class="lang-zh">
+                            {% for position in site.data.profile.positions_zh %}
+                            {% if position.logo -%}
+                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
+                            {%- endif %}
+                            {{ position.name }}<br/>
+                            {% endfor %}
+                            </div>
                         </div>
                         <div class="text-profile-bio mt-3" {% if site.data.profile.short_bio_text_justify %}style="text-align: justify;"{% endif %}>
-                            {{ site.data.profile.short_bio }}
+                            <div class="lang-en">{{ site.data.profile.short_bio }}</div>
+                            <div class="lang-zh">{{ site.data.profile.short_bio_zh }}</div>
                         </div>
                         {% if site.data.profile.cv_link %}
-                            <a target="_blank" href="{{ site.data.profile.cv_link | relative_url }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
+                            <a target="_blank" href="{{ site.data.profile.cv_link | relative_url }}"><i class="fas fa-file-alt"></i> {% include i18n.html key="cv" %}</a> <br/>
                         {% endif %}
                     </div>
-        
+
                 </div>
                 <hr />
                 <div class="row">
@@ -60,10 +71,10 @@
                         {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
                         {%- endif -%}
                         <a class="pr-3 no-break" target="_blank" href="{{ gscholar_url }}">
-                            <i class="fab fa-google-scholar"></i> Google Scholar
+                            <i class="fab fa-google-scholar"></i> {% include i18n.html key="google_scholar" %}
                         </a>
                         {% endif %}
-                        
+
                         {% if site.data.profile.github %}
                         <a class="pr-3 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
                             <i class="fab fa-github"></i> GitHub
@@ -72,7 +83,7 @@
 
                         {% if site.data.profile.wechat_qrcode %}
                         <a class="pr-3 no-break" data-toggle="modal" data-target="#modal-wechat">
-                            <i class="fab fa-weixin"></i> WeChat
+                            <i class="fab fa-weixin"></i> {% include i18n.html key="wechat" %}
                         </a>
                         {% endif %}
 
@@ -96,7 +107,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
 
@@ -113,7 +124,7 @@
             </div>
             {% endif %}
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">{% include i18n.html key="close" %}</button>
             </div>
         </div>
     </div>

@@ -1,0 +1,41 @@
+# Navigation
+nav_home: "首页"
+nav_publications: "学术论文"
+nav_blogs: "博客"
+nav_menu: "菜单"
+
+# Profile card
+cv: "个人简历"
+google_scholar: "谷歌学术"
+github: "GitHub"
+wechat: "微信"
+twitter: "Twitter"
+linkedin: "LinkedIn"
+orcid: "ORCID"
+close: "关闭"
+
+# Experience card
+education: "教育经历"
+experience: "工作经历"
+honors_awards: "荣誉奖励"
+
+# News card
+news: "最新动态"
+
+# Publication card
+selected_publications: "精选论文"
+view_all: "(查看全部)"
+all_publications: "全部论文"
+marks: "标注："
+equal_contribution: "共同一作"
+corresponding_author: "通讯作者"
+
+# Blog card
+read_more: "阅读全文"
+
+# Blog layout
+back_to_blogs: "返回博客列表"
+toc_title: "目录"
+
+# Footer
+last_updated: "最后更新："

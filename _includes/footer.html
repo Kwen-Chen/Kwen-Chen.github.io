@@ -1,7 +1,7 @@
 <footer class="footer py-3 mt-5 small">
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
         <div class="text-center text-muted" style="border-top: 1px solid #f0f0f0; padding-top: 1.5rem;">
-            <span class="mr-3"><i>Last updated: {{ "now" | date: "%b %Y" }}</i></span>
+            <span class="mr-3"><i>{% include i18n.html key="last_updated" %} {{ "now" | date: "%b %Y" }}</i></span>
             <span>{{ site.data.display.footer_text }}</span>
         </div>
     </div>

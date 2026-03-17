@@ -2,16 +2,25 @@
     <div class="{% if page.container_class %}{{ page.container_class }}{% else %}container-lg{% endif %}">
         <a class="navbar-brand"><strong>{{site.data.profile.navbar_name}}</strong></a>
         <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-map"></i> Menu
+            <i class="fas fa-map"></i> <span class="lang-en">Menu</span><span class="lang-zh">菜单</span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.navigation.pages %}
                 <li class="nav-item {% if item.name == page.navbar_title %}active{% endif %}">
-                    <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+                    <a class="nav-link" href="{{ item.url | relative_url }}">
+                        <span class="lang-en">{{ item.name }}</span><span class="lang-zh">{{ item.name_zh }}</span>
+                    </a>
                 </li>
                 {% endfor %}
+                <li class="nav-item d-flex align-items-center">
+                    <div class="lang-toggle">
+                        <span id="lang-toggle-en" class="lang-toggle-label" onclick="toggleLanguage('en')">EN</span>
+                        <span class="lang-toggle-divider"></span>
+                        <span id="lang-toggle-zh" class="lang-toggle-label" onclick="toggleLanguage('zh')">中</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

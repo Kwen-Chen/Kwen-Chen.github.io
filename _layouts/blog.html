@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lang-active-en">
 <!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ page.title }} - {{ site.data.profile.navbar_name }}</title>
+
+    <!-- i18n: must load before body renders to prevent flash -->
+    <script src="{{ '/assets/js/i18n.js' | relative_url }}"></script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
@@ -37,6 +40,14 @@
                                 </span>
                             {% endif %}
                         </div>
+                        {% if page.lang_pair %}
+                        <div class="mb-2">
+                            <a href="{{ page.lang_pair | relative_url }}" class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-globe"></i>
+                                {% if page.lang == 'zh' %}Read in English{% else %}阅读中文版{% endif %}
+                            </a>
+                        </div>
+                        {% endif %}
                     </header>
 
                     <div class="blog-content">
@@ -46,13 +57,13 @@
 
                 <div class="text-center mb-4">
                     <a href="{{ '/blogs' | relative_url }}" class="btn btn-outline-primary">
-                        <i class="fas fa-arrow-left"></i> Back to All Blogs
+                        <i class="fas fa-arrow-left"></i> {% include i18n.html key="back_to_blogs" %}
                     </a>
                 </div>
             </div>
             <div class="blog-toc-sidebar">
                 <nav id="blog-toc" class="blog-toc-nav">
-                    <div class="blog-toc-title">Contents</div>
+                    <div class="blog-toc-title">{% include i18n.html key="toc_title" %}</div>
                     <ul class="blog-toc-list"></ul>
                 </nav>
             </div>

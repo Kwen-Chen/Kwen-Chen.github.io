@@ -2,10 +2,14 @@ pages:
 # NOTE: `name` field must match the `navbar_title` field in the page's front matter to ensure the correct page is highlighted in the navbar.
 #       For example, the `navbar_title` field in `showcase.html` is "Showcase" and the `name` field here should also be "Showcase"
 - name: Home
+  name_zh: 首页
   url: /
 - name: Publications
+  name_zh: 学术论文
   url: /publications
 - name: Blogs
+  name_zh: 博客
   url: /blogs
 # - name: Showcase
+#   name_zh: 展示
 #   url: /showcase

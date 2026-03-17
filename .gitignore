@@ -6,5 +6,6 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
+my_readme.txt
 
 .DS_Store
