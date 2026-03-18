@@ -7,17 +7,17 @@ pub_pre:        ""
 pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Under Review</span>'
 pub_date:       "2026"
 abstract: >-
-  We introduce a gradient-preserving perspective for flexible entropy control in reinforcement learning from verifiable rewards (RLVR).
+  From the perspective of gradient preservation, we propose an entropy increase and decrease regulation mechanism, as well as three strategies for entropy control in the training of Reinforcement Learning with Verifiable Rewards (RLVR).
 abstract_zh: >-
-  我们从梯度保持的视角出发，提出了一种在可验证奖励强化学习（RLVR）中灵活控制熵的方法。
+  我们从梯度保持的视角出发，提出了一种熵增熵减的调节机制，并提出三种在可验证奖励强化学习（RLVR）训练中控制熵的策略。
 authors:
   - Kun Chen
-  - Peng Shi
+  - Peng Shi#
   - Fanfan Liu
   - Haibo Qiu
   - Zhixiong Zeng
   - Siqi Yang
-  - Wenji Mao
+  - Wenji Mao#
 
 cover:          /assets/images/covers/Flexible.png
 links:

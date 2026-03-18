@@ -7,6 +7,8 @@ tags:
   - LLM
   - RLVR
   - Entropy
+lang: zh
+lang_pair: /posts/2026/03/flexible-entropy-en/
 ---
 
 

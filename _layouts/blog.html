@@ -21,7 +21,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-vswe4c6qH7k4+QJxNlblz8aG9+X+QqJmidQCuH0Q2Tl+JYp4d8eGvN9Z3vR8e/3W1D4GWsGXD7/1YyYf6e2kEnw==" crossorigin="anonymous">
             <link rel="stylesheet" href="{{ '/assets/css/global.css' | relative_url }}">
 </head>
-<body class="bg-white d-flex flex-column min-vh-100" {{ page.body_attr }}>
+<body class="bg-white d-flex flex-column min-vh-100" {% if page.lang_pair %}data-lang-pair="{{ page.lang_pair | relative_url }}"{% endif %} {% if page.lang %}data-page-lang="{{ page.lang }}"{% endif %} {{ page.body_attr }}>
     {% include navbar.html %}
     <main class="flex-grow-1">
         <div class="blog-layout-wrapper">

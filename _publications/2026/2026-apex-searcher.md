@@ -12,7 +12,10 @@ abstract_zh: >-
   我们提出了APEX-Searcher，一个通过智能体规划与执行来增强大语言模型搜索能力的框架，以改善信息检索效果。
 authors:
   - Kun Chen
+  - Qingchao Kong#
+  - Feifei Zhao
+  - Wenji Mao
 cover:          /assets/images/covers/APEX.png
 links: 
-  arXiv: https://arxiv.org/abs/2602.09782
+  arXiv: https://arxiv.org/abs/2603.13853
 ---

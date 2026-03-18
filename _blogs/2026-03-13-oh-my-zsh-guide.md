@@ -7,6 +7,8 @@ tags:
   - shell
   - zsh
   - ai-gen
+lang: en
+lang_pair: /posts/2026/03/oh-my-zsh-guide-zh/
 ---
 
 # Oh My Zsh Guide

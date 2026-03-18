@@ -19,7 +19,8 @@
 
                         <div class="d-flex">
                             <div class="h1 font-weight-normal">
-                                {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
+                                <span class="lang-en">{{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small></span>
+                                <span class="lang-zh">{{ site.data.profile.primary_name_zh | default: site.data.profile.primary_name }} <small>{{ site.data.profile.primary_name }}</small></span>
                             </div>
                             {% if site.data.profile.portrait_url %}
                             <div class="ml-auto d-md-none">

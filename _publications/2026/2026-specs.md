@@ -10,13 +10,13 @@ abstract: >-
 abstract_zh: >-
   我们提出了SPECS，一种基于自蒸馏偏好的冷启动方法，通过解耦多模态学习来提升多模态推理能力。
 authors:
-  - Kun Chen
-  - Peng Shi
+  - Kun Chen*
+  - Peng Shi*
   - Haibo Qiu
   - Zhixiong Zeng
   - Siqi Yang
-  - Wenji Mao
-  - Lin Ma
+  - Wenji Mao#
+  - Lin Ma#
 cover:          /assets/images/covers/SPECS.png
 links:
   arXiv: https://arxiv.org/abs/2510.25801

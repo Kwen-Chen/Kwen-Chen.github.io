@@ -1,5 +1,6 @@
 primary_name: "Kun Chen"
-secondary_name: "陈坤"
+primary_name_zh: "陈坤"
+secondary_name: ""
 navbar_name: "Kun Chen"
 
 positions:
@@ -25,7 +26,7 @@ short_bio_text_justify: false
 short_bio: >-
   <h6> 👨‍🔬 About Me </h6>
   <p>
-    I am Kun Chen (陈坤), a two-year PhD student at the
+    I am Kun Chen, a two-year PhD student at the
     <a href="https://mais.ia.ac.cn/" target="_blank"> State Key Laboratory of Multimodal Artificial Intelligence Systems(MAIS)</a>,
     <a href="http://www.ia.cas.cn/" target="_blank">Institute of Automation, Chinese Academy of Sciences (CASIA)</a>,
     majoring in Computer Application Technology.

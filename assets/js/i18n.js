@@ -24,6 +24,16 @@
 
     window.toggleLanguage = function(targetLang) {
         localStorage.setItem('site-lang', targetLang);
+
+        // If on a single-language blog post with a lang_pair, navigate to the paired post
+        var body = document.body;
+        var pageLang = body.getAttribute('data-page-lang');
+        var langPair = body.getAttribute('data-lang-pair');
+        if (pageLang && langPair && targetLang !== pageLang) {
+            window.location.href = langPair;
+            return;
+        }
+
         var html = document.documentElement;
         html.className = html.className.replace(/lang-active-\w+/g, '').trim() + ' lang-active-' + targetLang;
         html.setAttribute('lang', targetLang === 'zh' ? 'zh-CN' : 'en');
