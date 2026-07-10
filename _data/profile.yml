@@ -92,6 +92,10 @@ education_zh:
   date: 2020年9月 - 2024年6月
 
 experience:
+- name: Tencent Hunyuan
+  logo: /assets/images/badges/tencent_logo.png
+  position: Agent Algorithm Intern
+  date: May 2026 - present
 - name: Meituan
   logo: /assets/images/badges/meituan_logo.png
   position: Algorithm Research Intern
@@ -102,6 +106,10 @@ experience:
   date: Jun. 2024 - Jun. 2025
 
 experience_zh:
+- name: 腾讯混元
+  logo: /assets/images/badges/tencent_logo.png
+  position: Agent算法实习生
+  date: 2026年5月 - 至今
 - name: 美团
   logo: /assets/images/badges/meituan_logo.png
   position: 算法研究实习生

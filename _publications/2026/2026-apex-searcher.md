@@ -2,7 +2,7 @@
 title:          "APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution"
 date:           2026-03-14 00:01:00 +0800
 selected:       true
-pub:            "ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
+pub:            ""
 pub_pre:        ""
 pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Under Review</span>'
 pub_date:       "2026"
