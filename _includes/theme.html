@@ -4,6 +4,5 @@ Classic loads nothing extra; pixel loads retro fonts + pixel-theme.css overrides
 {%- endcomment -%}
 {%- assign theme = site.data.display.theme | default: "classic" -%}
 {%- if theme == "pixel" -%}
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=DotGothic16&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/assets/css/pixel-theme.css' | relative_url }}">
 {%- endif -%}

@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* ============================================================
-   Pixel / retro game theme.
+   Pixel / retro game theme (visual style only — fonts untouched).
    Loaded on top of global.css when `theme: pixel` is set in
    _data/display.yml — every rule here overrides the classic look,
    so deleting this file (or switching back to `classic`) restores
@@ -17,16 +17,11 @@
     --px-success: #38b764;
     --px-shadow: 4px 4px 0 var(--px-ink);
     --px-shadow-sm: 3px 3px 0 var(--px-ink);
-    --px-font-body: "VT323", "DotGothic16", "Zpix", monospace;
-    --px-font-title: "Press Start 2P", "DotGothic16", "Zpix", monospace;
 }
 
 /* ---------- base ---------- */
 
 body {
-    font-family: var(--px-font-body);
-    font-size: 1.25rem;
-    line-height: 1.45;
     color: var(--px-ink);
     background-color: var(--px-paper) !important;
     background-image:
@@ -34,17 +29,6 @@ body {
         linear-gradient(90deg, rgba(26, 28, 44, 0.045) 1px, transparent 1px);
     background-size: 24px 24px;
 }
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: var(--px-font-title);
-    line-height: 1.6;
-    letter-spacing: 0;
-    color: var(--px-ink);
-}
-
-h5, .h5 { font-size: 0.95rem; }
-h6, .h6 { font-size: 0.8rem; }
 
 a {
     color: var(--px-accent);
@@ -64,11 +48,6 @@ hr {
     opacity: 0.6;
 }
 
-/* pixel-crisp images */
-img {
-    image-rendering: pixelated;
-}
-
 ::selection {
     background: var(--px-accent);
     color: #fff;
@@ -82,16 +61,8 @@ img {
     box-shadow: 0 4px 0 rgba(26, 28, 44, 0.15) !important;
 }
 
-.navbar-brand {
-    font-family: var(--px-font-title);
-    font-size: 0.85rem;
-}
-
 .navbar .nav-link {
-    font-family: var(--px-font-title);
-    font-size: 0.65rem;
     color: var(--px-ink) !important;
-    padding-top: 0.7rem;
 }
 
 .navbar .nav-item.active .nav-link,
@@ -139,12 +110,9 @@ img.rounded-circle {
 
 .badge,
 .badge-pill {
-    font-family: var(--px-font-title);
-    font-size: 0.55rem;
     border-radius: 0 !important;
     border: 2px solid var(--px-ink);
     box-shadow: 2px 2px 0 var(--px-ink);
-    padding: 0.35em 0.6em;
 }
 
 .badge-warning {
@@ -165,8 +133,6 @@ img.rounded-circle {
 /* ---------- buttons ---------- */
 
 .btn {
-    font-family: var(--px-font-title);
-    font-size: 0.65rem;
     border: 3px solid var(--px-ink);
     border-radius: 0 !important;
     box-shadow: var(--px-shadow-sm);
@@ -190,16 +156,6 @@ img.rounded-circle {
 }
 
 /* ---------- blog content ---------- */
-
-.blog-content {
-    font-family: var(--px-font-body);
-    font-size: 1.3rem;
-}
-
-.blog-content h1, .blog-content h2, .blog-content h3,
-.blog-content h4, .blog-content h5, .blog-content h6 {
-    font-family: var(--px-font-title);
-}
 
 .blog-content blockquote {
     border-left: 6px solid var(--px-accent);
@@ -229,17 +185,11 @@ img.rounded-circle {
     background-color: #fffbec;
 }
 
-code, pre, .highlighter-rouge pre {
-    font-family: "VT323", "Source Code Pro", monospace;
-    font-size: 1.05rem;
-}
-
 /* ---------- footer ---------- */
 
 .footer {
     border-top: 3px solid var(--px-ink);
     background-color: var(--px-panel);
-    font-family: var(--px-font-body);
 }
 
 /* ---------- language toggle ---------- */
@@ -248,8 +198,6 @@ code, pre, .highlighter-rouge pre {
     border: 2px solid var(--px-ink) !important;
     border-radius: 0 !important;
     box-shadow: 2px 2px 0 var(--px-ink);
-    font-family: var(--px-font-title);
-    font-size: 0.6rem;
 }
 
 /* ---------- scrollbar (webkit) ---------- */
