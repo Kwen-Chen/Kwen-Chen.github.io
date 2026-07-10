@@ -1,3 +1,7 @@
+# Site theme: "classic" (original look) or "pixel" (retro pixel-game style).
+# Switch anytime by changing this one line.
+theme: pixel
+
 homepage:
   show_experience: true
   show_news: true

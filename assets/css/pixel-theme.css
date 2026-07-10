@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* ============================================================
+   Pixel / retro game theme.
+   Loaded on top of global.css when `theme: pixel` is set in
+   _data/display.yml — every rule here overrides the classic look,
+   so deleting this file (or switching back to `classic`) restores
+   the original theme untouched.
+   ============================================================ */
+
+:root {
+    --px-ink: #1a1c2c;
+    --px-paper: #f4f1e8;
+    --px-panel: #ffffff;
+    --px-accent: #3b6ef5;
+    --px-accent-dark: #29366f;
+    --px-warning: #f5a623;
+    --px-success: #38b764;
+    --px-shadow: 4px 4px 0 var(--px-ink);
+    --px-shadow-sm: 3px 3px 0 var(--px-ink);
+    --px-font-body: "VT323", "DotGothic16", "Zpix", monospace;
+    --px-font-title: "Press Start 2P", "DotGothic16", "Zpix", monospace;
+}
+
+/* ---------- base ---------- */
+
+body {
+    font-family: var(--px-font-body);
+    font-size: 1.25rem;
+    line-height: 1.45;
+    color: var(--px-ink);
+    background-color: var(--px-paper) !important;
+    background-image:
+        linear-gradient(rgba(26, 28, 44, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 28, 44, 0.045) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--px-font-title);
+    line-height: 1.6;
+    letter-spacing: 0;
+    color: var(--px-ink);
+}
+
+h5, .h5 { font-size: 0.95rem; }
+h6, .h6 { font-size: 0.8rem; }
+
+a {
+    color: var(--px-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--px-accent-dark);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 3px;
+}
+
+hr {
+    border: none;
+    border-top: 3px dashed var(--px-ink);
+    opacity: 0.6;
+}
+
+/* pixel-crisp images */
+img {
+    image-rendering: pixelated;
+}
+
+::selection {
+    background: var(--px-accent);
+    color: #fff;
+}
+
+/* ---------- navbar ---------- */
+
+.navbar {
+    background-color: var(--px-panel) !important;
+    border-bottom: 3px solid var(--px-ink);
+    box-shadow: 0 4px 0 rgba(26, 28, 44, 0.15) !important;
+}
+
+.navbar-brand {
+    font-family: var(--px-font-title);
+    font-size: 0.85rem;
+}
+
+.navbar .nav-link {
+    font-family: var(--px-font-title);
+    font-size: 0.65rem;
+    color: var(--px-ink) !important;
+    padding-top: 0.7rem;
+}
+
+.navbar .nav-item.active .nav-link,
+.navbar .nav-link:hover {
+    color: var(--px-accent) !important;
+}
+
+.navbar-toggler {
+    border: 2px solid var(--px-ink);
+    border-radius: 0;
+}
+
+/* ---------- cards & panels ---------- */
+
+.card,
+.card.border-0 {
+    border: 3px solid var(--px-ink) !important;
+    border-radius: 0 !important;
+    box-shadow: var(--px-shadow) !important;
+    background-color: var(--px-panel);
+    transition: transform 0.1s steps(2), box-shadow 0.1s steps(2);
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--px-ink) !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--px-shadow-sm) !important;
+}
+
+.rounded-sm, .rounded, .rounded-lg, .rounded-circle,
+.rounded-xl, .rounded-xl-top, .rounded-xl-bottom {
+    border-radius: 0 !important;
+}
+
+/* portrait */
+.card-img-overlay img,
+img.rounded-circle {
+    border: 3px solid var(--px-ink);
+}
+
+/* ---------- badges ---------- */
+
+.badge,
+.badge-pill {
+    font-family: var(--px-font-title);
+    font-size: 0.55rem;
+    border-radius: 0 !important;
+    border: 2px solid var(--px-ink);
+    box-shadow: 2px 2px 0 var(--px-ink);
+    padding: 0.35em 0.6em;
+}
+
+.badge-warning {
+    background-color: var(--px-warning);
+    color: var(--px-ink);
+}
+
+.badge-success {
+    background-color: var(--px-success);
+    color: #fff;
+}
+
+.badge-info {
+    background-color: var(--px-accent);
+    color: #fff;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+    font-family: var(--px-font-title);
+    font-size: 0.65rem;
+    border: 3px solid var(--px-ink);
+    border-radius: 0 !important;
+    box-shadow: var(--px-shadow-sm);
+    transition: none;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--px-ink);
+}
+
+/* ---------- publication covers ---------- */
+
+.pub-cover-zoom,
+.cover-image,
+.bubble-visual-hash {
+    border: 3px solid var(--px-ink);
+    border-radius: 0 !important;
+    box-shadow: var(--px-shadow-sm);
+}
+
+/* ---------- blog content ---------- */
+
+.blog-content {
+    font-family: var(--px-font-body);
+    font-size: 1.3rem;
+}
+
+.blog-content h1, .blog-content h2, .blog-content h3,
+.blog-content h4, .blog-content h5, .blog-content h6 {
+    font-family: var(--px-font-title);
+}
+
+.blog-content blockquote {
+    border-left: 6px solid var(--px-accent);
+    background: rgba(59, 110, 245, 0.08);
+    border-radius: 0;
+}
+
+.blog-content img {
+    border: 3px solid var(--px-ink);
+    border-radius: 0 !important;
+    box-shadow: var(--px-shadow);
+}
+
+.blog-content table {
+    border: 3px solid var(--px-ink);
+}
+
+.blog-content table th,
+.blog-content table td {
+    border: 2px solid var(--px-ink);
+}
+
+.highlighter-rouge {
+    border: 3px solid var(--px-ink);
+    border-radius: 0;
+    box-shadow: var(--px-shadow-sm);
+    background-color: #fffbec;
+}
+
+code, pre, .highlighter-rouge pre {
+    font-family: "VT323", "Source Code Pro", monospace;
+    font-size: 1.05rem;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+    border-top: 3px solid var(--px-ink);
+    background-color: var(--px-panel);
+    font-family: var(--px-font-body);
+}
+
+/* ---------- language toggle ---------- */
+
+.lang-toggle {
+    border: 2px solid var(--px-ink) !important;
+    border-radius: 0 !important;
+    box-shadow: 2px 2px 0 var(--px-ink);
+    font-family: var(--px-font-title);
+    font-size: 0.6rem;
+}
+
+/* ---------- scrollbar (webkit) ---------- */
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--px-paper);
+    border-left: 2px solid var(--px-ink);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--px-ink);
+    border: 3px solid var(--px-paper);
+}

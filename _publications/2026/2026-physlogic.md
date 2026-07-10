@@ -16,6 +16,7 @@ authors:
   - Jiahao Zhao
   - Lei Wang
   - Wenji Mao
+cover:          /assets/images/covers/PhysLogic.png
 links:
   arXiv: https://arxiv.org/abs/2605.17104
   code: https://github.com/ScienceOne-AI/PhysLogic
