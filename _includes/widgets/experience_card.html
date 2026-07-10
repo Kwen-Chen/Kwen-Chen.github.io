@@ -3,8 +3,8 @@
         <div class="card border-0 shadow-sm bg-white">
             <div class="card-body p-4">
                 <div class="row">
+                    {% if site.data.profile.education %}
                     <div class="col-lg-6">
-                        {% if site.data.profile.education %}
                         <div class="mx-2 my-1">
                             <h5>{% include i18n.html key="education" %}</h5>
                             <div class="lang-en">
@@ -42,9 +42,11 @@
                             </ul>
                             </div>
                         </div>
-                        {% endif %}
+                    </div>
+                    {% endif %}
 
-                        {% if site.data.profile.experience %}
+                    {% if site.data.profile.experience %}
+                    <div class="col-lg-6">
                         <div class="mx-2 my-1">
                             <h5>{% include i18n.html key="experience" %}</h5>
                             <div class="lang-en">
@@ -82,11 +84,13 @@
                             </ul>
                             </div>
                         </div>
-                        {% endif %}
                     </div>
+                    {% endif %}
+                </div>
 
-                    {% if site.data.profile.awards %}
-                    <div class="col-lg-6">
+                {% if site.data.profile.awards %}
+                <div class="row">
+                    <div class="col-12">
                         <div class="mx-2 my-1">
                             <h5>{% include i18n.html key="honors_awards" %}</h5>
                             <div class="lang-en">
@@ -115,8 +119,8 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
                 </div>
+                {% endif %}
 
             </div>
         </div>
