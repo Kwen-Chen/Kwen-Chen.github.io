@@ -2,9 +2,8 @@
 title:          "APEX-Searcher: Augmenting LLMs' Search Capabilities through Agentic Planning and Execution"
 date:           2026-03-14 00:01:00 +0800
 selected:       true
-pub:            ""
-pub_pre:        ""
-pub_last:       ' <span class="badge badge-pill badge-publication badge-warning">Under Review</span>'
+pub:            "Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+pub_last:       ' <span class="badge badge-pill badge-publication badge-info">Findings</span>'
 pub_date:       "2026"
 abstract: >-
   We propose APEX-Searcher, a framework that augments LLMs' search capabilities through agentic planning and execution for improved information retrieval.
